@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C9D71D3316B7F8C400AB00C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3216B7F8C400AB00C2 /* UIKit.framework */; };
+		C9D71D3516B7F8C400AB00C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3416B7F8C400AB00C2 /* Foundation.framework */; };
+		C9D71D3716B7F8C400AB00C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3616B7F8C400AB00C2 /* CoreGraphics.framework */; };
+		C9D71D3D16B7F8C400AB00C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9D71D3B16B7F8C400AB00C2 /* InfoPlist.strings */; };
+		C9D71D3F16B7F8C400AB00C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D71D3E16B7F8C400AB00C2 /* main.m */; };
+		C9D71D4316B7F8C400AB00C2 /* XBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D71D4216B7F8C400AB00C2 /* XBAppDelegate.m */; };
+		C9D71D4516B7F8C400AB00C2 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D71D4416B7F8C400AB00C2 /* Default.png */; };
+		C9D71D4716B7F8C400AB00C2 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D71D4616B7F8C400AB00C2 /* Default@2x.png */; };
+		C9D71D4916B7F8C400AB00C2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D71D4816B7F8C400AB00C2 /* Default-568h@2x.png */; };
+		C9D71D6E16B8021400AB00C2 /* book.epub in Resources */ = {isa = PBXBuildFile; fileRef = C9D71D6D16B8021400AB00C2 /* book.epub */; };
+		C9D71D8816B806C100AB00C2 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = C9D71D8616B806C000AB00C2 /* SSZipArchive.m */; };
+		C9D71D8A16B806D900AB00C2 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D8916B806D900AB00C2 /* libz.dylib */; };
+		C9D71D9416B8072C00AB00C2 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = C9D71D8C16B8072B00AB00C2 /* ioapi.c */; };
+		C9D71D9516B8072C00AB00C2 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = C9D71D8E16B8072C00AB00C2 /* mztools.c */; };
+		C9D71D9616B8072C00AB00C2 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = C9D71D9016B8072C00AB00C2 /* unzip.c */; };
+		C9D71D9716B8072C00AB00C2 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = C9D71D9216B8072C00AB00C2 /* zip.c */; };
+		C9D71DA716B8817B00AB00C2 /* 124929-matte-white-square-icon-culture-book3-open.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D71DA616B8817B00AB00C2 /* 124929-matte-white-square-icon-culture-book3-open.png */; };
+		C9D71DA916B8821800AB00C2 /* Копия 124929-matte-white-square-icon-culture-book3-open.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D71DA816B8821700AB00C2 /* Копия 124929-matte-white-square-icon-culture-book3-open.png */; };
+		C9F2814616BB10A400053942 /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814116BB10A400053942 /* Chapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2814716BB10A400053942 /* EPub.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814316BB10A400053942 /* EPub.m */; };
+		C9F2814816BB10A400053942 /* EPubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814516BB10A400053942 /* EPubViewController.m */; };
+		C9F2815916BB10F800053942 /* ChapterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814B16BB10F800053942 /* ChapterListViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2815A16BB10F800053942 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814E16BB10F800053942 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2815B16BB10F800053942 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2815016BB10F800053942 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2815C16BB10F800053942 /* SearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2815216BB10F800053942 /* SearchResult.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2815D16BB10F800053942 /* SearchResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2815416BB10F800053942 /* SearchResultsViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2815E16BB10F800053942 /* UIWebView+SearchWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2815616BB10F800053942 /* UIWebView+SearchWebView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2815F16BB10F800053942 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = C9F2815816BB10F800053942 /* ZipArchive.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818416BB12D400053942 /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F2818316BB12D400053942 /* libxml2.dylib */; };
+		C9F2818516BB140200053942 /* CXMLDocument_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817F16BB122700053942 /* CXMLDocument_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818616BB141500053942 /* CXHTMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2816416BB11D800053942 /* CXHTMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818716BB144100053942 /* CXMLNode_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2818116BB122700053942 /* CXMLNode_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818816BB144100053942 /* CXMLDocument_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2816616BB11D800053942 /* CXMLDocument_PrivateExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818916BB144100053942 /* CXMLDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2816816BB11D800053942 /* CXMLDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818A16BB144100053942 /* CXMLElement_CreationExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2816A16BB11D800053942 /* CXMLElement_CreationExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818B16BB144100053942 /* CXMLElement_ElementTreeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2816C16BB11D800053942 /* CXMLElement_ElementTreeExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818C16BB144100053942 /* CXMLElement.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2816E16BB11D800053942 /* CXMLElement.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818D16BB144100053942 /* CXMLNamespaceNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817016BB11D800053942 /* CXMLNamespaceNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818E16BB144100053942 /* CXMLNode_PrivateExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817216BB11D800053942 /* CXMLNode_PrivateExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2818F16BB144100053942 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817416BB11D800053942 /* CXMLNode_XPathExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2819016BB144100053942 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817616BB11D800053942 /* CXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2819116BB144100053942 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817C16BB121200053942 /* CTidy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C9F2819316BBAB2600053942 /* EPubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F2819216BBAB2600053942 /* EPubView.xib */; };
+		C9F2819916BBAE9800053942 /* XBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2819716BBAE9800053942 /* XBRootViewController.m */; };
+		C9F2819A16BBAE9800053942 /* XBRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F2819816BBAE9800053942 /* XBRootViewController.xib */; };
+		C9F2819D16BBB29600053942 /* ChapterListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F2819B16BBB29500053942 /* ChapterListViewController.xib */; };
+		C9F2819E16BBB29600053942 /* SearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F2819C16BBB29600053942 /* SearchResultsViewController.xib */; };
+		C9F281A116BBBCA000053942 /* XBTranslator.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F281A016BBBC9F00053942 /* XBTranslator.m */; };
+		C9F281A416BBC12B00053942 /* XBTranslatePopover.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F281A316BBC12A00053942 /* XBTranslatePopover.m */; };
+		C9F281A616BBC13E00053942 /* XBTranslatePopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F281A516BBC13E00053942 /* XBTranslatePopover.xib */; };
+		C9F281A816BBC67700053942 /* translatePanel.png in Resources */ = {isa = PBXBuildFile; fileRef = C9F281A716BBC67600053942 /* translatePanel.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C9D71D2F16B7F8C400AB00C2 /* xBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D71D3216B7F8C400AB00C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9D71D3416B7F8C400AB00C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9D71D3616B7F8C400AB00C2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9D71D3A16B7F8C400AB00C2 /* xBook-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "xBook-Info.plist"; sourceTree = "<group>"; };
+		C9D71D3C16B7F8C400AB00C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9D71D3E16B7F8C400AB00C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9D71D4016B7F8C400AB00C2 /* xBook-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "xBook-Prefix.pch"; sourceTree = "<group>"; };
+		C9D71D4116B7F8C400AB00C2 /* XBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBAppDelegate.h; sourceTree = "<group>"; };
+		C9D71D4216B7F8C400AB00C2 /* XBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XBAppDelegate.m; sourceTree = "<group>"; };
+		C9D71D4416B7F8C400AB00C2 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		C9D71D4616B7F8C400AB00C2 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		C9D71D4816B7F8C400AB00C2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C9D71D6D16B8021400AB00C2 /* book.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = book.epub; sourceTree = "<group>"; };
+		C9D71D8516B806C000AB00C2 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
+		C9D71D8616B806C000AB00C2 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
+		C9D71D8916B806D900AB00C2 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		C9D71D8B16B8072B00AB00C2 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = crypt.h; path = minizip/crypt.h; sourceTree = "<group>"; };
+		C9D71D8C16B8072B00AB00C2 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = ioapi.c; path = minizip/ioapi.c; sourceTree = "<group>"; };
+		C9D71D8D16B8072B00AB00C2 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ioapi.h; path = minizip/ioapi.h; sourceTree = "<group>"; };
+		C9D71D8E16B8072C00AB00C2 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = mztools.c; path = minizip/mztools.c; sourceTree = "<group>"; };
+		C9D71D8F16B8072C00AB00C2 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = mztools.h; path = minizip/mztools.h; sourceTree = "<group>"; };
+		C9D71D9016B8072C00AB00C2 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = unzip.c; path = minizip/unzip.c; sourceTree = "<group>"; };
+		C9D71D9116B8072C00AB00C2 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unzip.h; path = minizip/unzip.h; sourceTree = "<group>"; };
+		C9D71D9216B8072C00AB00C2 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = zip.c; path = minizip/zip.c; sourceTree = "<group>"; };
+		C9D71D9316B8072C00AB00C2 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = zip.h; path = minizip/zip.h; sourceTree = "<group>"; };
+		C9D71DA616B8817B00AB00C2 /* 124929-matte-white-square-icon-culture-book3-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "124929-matte-white-square-icon-culture-book3-open.png"; sourceTree = "<group>"; };
+		C9D71DA816B8821700AB00C2 /* Копия 124929-matte-white-square-icon-culture-book3-open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Копия 124929-matte-white-square-icon-culture-book3-open.png"; sourceTree = "<group>"; };
+		C9F2814016BB10A400053942 /* Chapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chapter.h; sourceTree = "<group>"; };
+		C9F2814116BB10A400053942 /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
+		C9F2814216BB10A400053942 /* EPub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPub.h; sourceTree = "<group>"; };
+		C9F2814316BB10A400053942 /* EPub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPub.m; sourceTree = "<group>"; };
+		C9F2814416BB10A400053942 /* EPubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPubViewController.h; sourceTree = "<group>"; };
+		C9F2814516BB10A400053942 /* EPubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPubViewController.m; sourceTree = "<group>"; };
+		C9F2814A16BB10F800053942 /* ChapterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterListViewController.h; sourceTree = "<group>"; };
+		C9F2814B16BB10F800053942 /* ChapterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterListViewController.m; sourceTree = "<group>"; };
+		C9F2814C16BB10F800053942 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
+		C9F2814D16BB10F800053942 /* GTMNSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GTMNSString+HTML.h"; sourceTree = "<group>"; };
+		C9F2814E16BB10F800053942 /* GTMNSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GTMNSString+HTML.m"; sourceTree = "<group>"; };
+		C9F2814F16BB10F800053942 /* NSString+HTML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTML.h"; sourceTree = "<group>"; };
+		C9F2815016BB10F800053942 /* NSString+HTML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTML.m"; sourceTree = "<group>"; };
+		C9F2815116BB10F800053942 /* SearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResult.h; sourceTree = "<group>"; };
+		C9F2815216BB10F800053942 /* SearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResult.m; sourceTree = "<group>"; };
+		C9F2815316BB10F800053942 /* SearchResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsViewController.h; sourceTree = "<group>"; };
+		C9F2815416BB10F800053942 /* SearchResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsViewController.m; sourceTree = "<group>"; };
+		C9F2815516BB10F800053942 /* UIWebView+SearchWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+SearchWebView.h"; sourceTree = "<group>"; };
+		C9F2815616BB10F800053942 /* UIWebView+SearchWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+SearchWebView.m"; sourceTree = "<group>"; };
+		C9F2815716BB10F800053942 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		C9F2815816BB10F800053942 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
+		C9F2816316BB11D800053942 /* CXHTMLDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXHTMLDocument.h; path = Source/CXHTMLDocument.h; sourceTree = "<group>"; };
+		C9F2816416BB11D800053942 /* CXHTMLDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXHTMLDocument.m; path = Source/CXHTMLDocument.m; sourceTree = "<group>"; };
+		C9F2816516BB11D800053942 /* CXMLDocument_PrivateExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLDocument_PrivateExtensions.h; path = Source/CXMLDocument_PrivateExtensions.h; sourceTree = "<group>"; };
+		C9F2816616BB11D800053942 /* CXMLDocument_PrivateExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLDocument_PrivateExtensions.m; path = Source/CXMLDocument_PrivateExtensions.m; sourceTree = "<group>"; };
+		C9F2816716BB11D800053942 /* CXMLDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLDocument.h; path = Source/CXMLDocument.h; sourceTree = "<group>"; };
+		C9F2816816BB11D800053942 /* CXMLDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLDocument.m; path = Source/CXMLDocument.m; sourceTree = "<group>"; };
+		C9F2816916BB11D800053942 /* CXMLElement_CreationExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLElement_CreationExtensions.h; path = Source/CXMLElement_CreationExtensions.h; sourceTree = "<group>"; };
+		C9F2816A16BB11D800053942 /* CXMLElement_CreationExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLElement_CreationExtensions.m; path = Source/CXMLElement_CreationExtensions.m; sourceTree = "<group>"; };
+		C9F2816B16BB11D800053942 /* CXMLElement_ElementTreeExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLElement_ElementTreeExtensions.h; path = Source/CXMLElement_ElementTreeExtensions.h; sourceTree = "<group>"; };
+		C9F2816C16BB11D800053942 /* CXMLElement_ElementTreeExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLElement_ElementTreeExtensions.m; path = Source/CXMLElement_ElementTreeExtensions.m; sourceTree = "<group>"; };
+		C9F2816D16BB11D800053942 /* CXMLElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLElement.h; path = Source/CXMLElement.h; sourceTree = "<group>"; };
+		C9F2816E16BB11D800053942 /* CXMLElement.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLElement.m; path = Source/CXMLElement.m; sourceTree = "<group>"; };
+		C9F2816F16BB11D800053942 /* CXMLNamespaceNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLNamespaceNode.h; path = Source/CXMLNamespaceNode.h; sourceTree = "<group>"; };
+		C9F2817016BB11D800053942 /* CXMLNamespaceNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLNamespaceNode.m; path = Source/CXMLNamespaceNode.m; sourceTree = "<group>"; };
+		C9F2817116BB11D800053942 /* CXMLNode_PrivateExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLNode_PrivateExtensions.h; path = Source/CXMLNode_PrivateExtensions.h; sourceTree = "<group>"; };
+		C9F2817216BB11D800053942 /* CXMLNode_PrivateExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLNode_PrivateExtensions.m; path = Source/CXMLNode_PrivateExtensions.m; sourceTree = "<group>"; };
+		C9F2817316BB11D800053942 /* CXMLNode_XPathExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLNode_XPathExtensions.h; path = Source/CXMLNode_XPathExtensions.h; sourceTree = "<group>"; };
+		C9F2817416BB11D800053942 /* CXMLNode_XPathExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLNode_XPathExtensions.m; path = Source/CXMLNode_XPathExtensions.m; sourceTree = "<group>"; };
+		C9F2817516BB11D800053942 /* CXMLNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLNode.h; path = Source/CXMLNode.h; sourceTree = "<group>"; };
+		C9F2817616BB11D800053942 /* CXMLNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLNode.m; path = Source/CXMLNode.m; sourceTree = "<group>"; };
+		C9F2817816BB11D800053942 /* TouchXML.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TouchXML.h; path = Source/TouchXML.h; sourceTree = "<group>"; };
+		C9F2817B16BB121200053942 /* CTidy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CTidy.h; path = Source/Tidy/CTidy.h; sourceTree = "<group>"; };
+		C9F2817C16BB121200053942 /* CTidy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CTidy.m; path = Source/Tidy/CTidy.m; sourceTree = "<group>"; };
+		C9F2817E16BB122700053942 /* CXMLDocument_CreationExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLDocument_CreationExtensions.h; path = Source/Creation/CXMLDocument_CreationExtensions.h; sourceTree = "<group>"; };
+		C9F2817F16BB122700053942 /* CXMLDocument_CreationExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLDocument_CreationExtensions.m; path = Source/Creation/CXMLDocument_CreationExtensions.m; sourceTree = "<group>"; };
+		C9F2818016BB122700053942 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLNode_CreationExtensions.h; path = Source/Creation/CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
+		C9F2818116BB122700053942 /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLNode_CreationExtensions.m; path = Source/Creation/CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
+		C9F2818316BB12D400053942 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		C9F2819216BBAB2600053942 /* EPubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPubView.xib; sourceTree = "<group>"; };
+		C9F2819616BBAE9800053942 /* XBRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRootViewController.h; sourceTree = "<group>"; };
+		C9F2819716BBAE9800053942 /* XBRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRootViewController.m; sourceTree = "<group>"; };
+		C9F2819816BBAE9800053942 /* XBRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XBRootViewController.xib; sourceTree = "<group>"; };
+		C9F2819B16BBB29500053942 /* ChapterListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterListViewController.xib; sourceTree = "<group>"; };
+		C9F2819C16BBB29600053942 /* SearchResultsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultsViewController.xib; sourceTree = "<group>"; };
+		C9F2819F16BBBC9F00053942 /* XBTranslator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTranslator.h; sourceTree = "<group>"; };
+		C9F281A016BBBC9F00053942 /* XBTranslator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTranslator.m; sourceTree = "<group>"; };
+		C9F281A216BBC12900053942 /* XBTranslatePopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBTranslatePopover.h; sourceTree = "<group>"; };
+		C9F281A316BBC12A00053942 /* XBTranslatePopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBTranslatePopover.m; sourceTree = "<group>"; };
+		C9F281A516BBC13E00053942 /* XBTranslatePopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XBTranslatePopover.xib; sourceTree = "<group>"; };
+		C9F281A716BBC67600053942 /* translatePanel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = translatePanel.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9D71D2C16B7F8C400AB00C2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F2818416BB12D400053942 /* libxml2.dylib in Frameworks */,
+				C9D71D8A16B806D900AB00C2 /* libz.dylib in Frameworks */,
+				C9D71D3316B7F8C400AB00C2 /* UIKit.framework in Frameworks */,
+				C9D71D3516B7F8C400AB00C2 /* Foundation.framework in Frameworks */,
+				C9D71D3716B7F8C400AB00C2 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C9D71D2616B7F8C400AB00C2 = {
+			isa = PBXGroup;
+			children = (
+				C9F2818316BB12D400053942 /* libxml2.dylib */,
+				C9D71DA816B8821700AB00C2 /* Копия 124929-matte-white-square-icon-culture-book3-open.png */,
+				C9D71DA616B8817B00AB00C2 /* 124929-matte-white-square-icon-culture-book3-open.png */,
+				C9D71D3816B7F8C400AB00C2 /* xBook */,
+				C9D71D3116B7F8C400AB00C2 /* Frameworks */,
+				C9D71D3016B7F8C400AB00C2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C9D71D3016B7F8C400AB00C2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9D71D2F16B7F8C400AB00C2 /* xBook.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9D71D3116B7F8C400AB00C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9D71D8916B806D900AB00C2 /* libz.dylib */,
+				C9D71D3216B7F8C400AB00C2 /* UIKit.framework */,
+				C9D71D3416B7F8C400AB00C2 /* Foundation.framework */,
+				C9D71D3616B7F8C400AB00C2 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9D71D3816B7F8C400AB00C2 /* xBook */ = {
+			isa = PBXGroup;
+			children = (
+				C9F281A916BBCC7300053942 /* Translator */,
+				C9F2814916BB10AD00053942 /* EpubHandler */,
+				C9D71D4116B7F8C400AB00C2 /* XBAppDelegate.h */,
+				C9D71D4216B7F8C400AB00C2 /* XBAppDelegate.m */,
+				C9F2819616BBAE9800053942 /* XBRootViewController.h */,
+				C9F2819716BBAE9800053942 /* XBRootViewController.m */,
+				C9F2819816BBAE9800053942 /* XBRootViewController.xib */,
+				C9D71D9B16B83C4200AB00C2 /* ZipArchive */,
+				C9D71D3916B7F8C400AB00C2 /* Supporting Files */,
+			);
+			path = xBook;
+			sourceTree = "<group>";
+		};
+		C9D71D3916B7F8C400AB00C2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9D71D6D16B8021400AB00C2 /* book.epub */,
+				C9D71D3A16B7F8C400AB00C2 /* xBook-Info.plist */,
+				C9D71D3B16B7F8C400AB00C2 /* InfoPlist.strings */,
+				C9D71D3E16B7F8C400AB00C2 /* main.m */,
+				C9D71D4016B7F8C400AB00C2 /* xBook-Prefix.pch */,
+				C9D71D4416B7F8C400AB00C2 /* Default.png */,
+				C9D71D4616B7F8C400AB00C2 /* Default@2x.png */,
+				C9D71D4816B7F8C400AB00C2 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9D71D9816B8073500AB00C2 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				C9D71D8B16B8072B00AB00C2 /* crypt.h */,
+				C9D71D8C16B8072B00AB00C2 /* ioapi.c */,
+				C9D71D8D16B8072B00AB00C2 /* ioapi.h */,
+				C9D71D8E16B8072C00AB00C2 /* mztools.c */,
+				C9D71D8F16B8072C00AB00C2 /* mztools.h */,
+				C9D71D9016B8072C00AB00C2 /* unzip.c */,
+				C9D71D9116B8072C00AB00C2 /* unzip.h */,
+				C9D71D9216B8072C00AB00C2 /* zip.c */,
+				C9D71D9316B8072C00AB00C2 /* zip.h */,
+			);
+			name = minizip;
+			sourceTree = "<group>";
+		};
+		C9D71D9B16B83C4200AB00C2 /* ZipArchive */ = {
+			isa = PBXGroup;
+			children = (
+				C9D71D9816B8073500AB00C2 /* minizip */,
+				C9D71D8516B806C000AB00C2 /* SSZipArchive.h */,
+				C9D71D8616B806C000AB00C2 /* SSZipArchive.m */,
+			);
+			name = ZipArchive;
+			sourceTree = "<group>";
+		};
+		C9F2814916BB10AD00053942 /* EpubHandler */ = {
+			isa = PBXGroup;
+			children = (
+				C9F2816216BB11C100053942 /* Sources */,
+				C9F281AA16BBD39900053942 /* Extensions */,
+				C9F2814A16BB10F800053942 /* ChapterListViewController.h */,
+				C9F2814B16BB10F800053942 /* ChapterListViewController.m */,
+				C9F2815116BB10F800053942 /* SearchResult.h */,
+				C9F2815216BB10F800053942 /* SearchResult.m */,
+				C9F2815316BB10F800053942 /* SearchResultsViewController.h */,
+				C9F2815416BB10F800053942 /* SearchResultsViewController.m */,
+				C9F2815516BB10F800053942 /* UIWebView+SearchWebView.h */,
+				C9F2815616BB10F800053942 /* UIWebView+SearchWebView.m */,
+				C9F2814016BB10A400053942 /* Chapter.h */,
+				C9F2814116BB10A400053942 /* Chapter.m */,
+				C9F2814216BB10A400053942 /* EPub.h */,
+				C9F2814316BB10A400053942 /* EPub.m */,
+				C9F2814416BB10A400053942 /* EPubViewController.h */,
+				C9F2814516BB10A400053942 /* EPubViewController.m */,
+				C9F2819216BBAB2600053942 /* EPubView.xib */,
+				C9F2819B16BBB29500053942 /* ChapterListViewController.xib */,
+				C9F2819C16BBB29600053942 /* SearchResultsViewController.xib */,
+			);
+			name = EpubHandler;
+			sourceTree = "<group>";
+		};
+		C9F2816216BB11C100053942 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C9F2818216BB122D00053942 /* Creation */,
+				C9F2816316BB11D800053942 /* CXHTMLDocument.h */,
+				C9F2816416BB11D800053942 /* CXHTMLDocument.m */,
+				C9F2816516BB11D800053942 /* CXMLDocument_PrivateExtensions.h */,
+				C9F2816616BB11D800053942 /* CXMLDocument_PrivateExtensions.m */,
+				C9F2816716BB11D800053942 /* CXMLDocument.h */,
+				C9F2816816BB11D800053942 /* CXMLDocument.m */,
+				C9F2816916BB11D800053942 /* CXMLElement_CreationExtensions.h */,
+				C9F2816A16BB11D800053942 /* CXMLElement_CreationExtensions.m */,
+				C9F2816B16BB11D800053942 /* CXMLElement_ElementTreeExtensions.h */,
+				C9F2816C16BB11D800053942 /* CXMLElement_ElementTreeExtensions.m */,
+				C9F2816D16BB11D800053942 /* CXMLElement.h */,
+				C9F2816E16BB11D800053942 /* CXMLElement.m */,
+				C9F2816F16BB11D800053942 /* CXMLNamespaceNode.h */,
+				C9F2817016BB11D800053942 /* CXMLNamespaceNode.m */,
+				C9F2817116BB11D800053942 /* CXMLNode_PrivateExtensions.h */,
+				C9F2817216BB11D800053942 /* CXMLNode_PrivateExtensions.m */,
+				C9F2817316BB11D800053942 /* CXMLNode_XPathExtensions.h */,
+				C9F2817416BB11D800053942 /* CXMLNode_XPathExtensions.m */,
+				C9F2817516BB11D800053942 /* CXMLNode.h */,
+				C9F2817616BB11D800053942 /* CXMLNode.m */,
+				C9F2817D16BB121B00053942 /* Tidy */,
+				C9F2817816BB11D800053942 /* TouchXML.h */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		C9F2817D16BB121B00053942 /* Tidy */ = {
+			isa = PBXGroup;
+			children = (
+				C9F2817B16BB121200053942 /* CTidy.h */,
+				C9F2817C16BB121200053942 /* CTidy.m */,
+			);
+			name = Tidy;
+			sourceTree = "<group>";
+		};
+		C9F2818216BB122D00053942 /* Creation */ = {
+			isa = PBXGroup;
+			children = (
+				C9F2817E16BB122700053942 /* CXMLDocument_CreationExtensions.h */,
+				C9F2817F16BB122700053942 /* CXMLDocument_CreationExtensions.m */,
+				C9F2818016BB122700053942 /* CXMLNode_CreationExtensions.h */,
+				C9F2818116BB122700053942 /* CXMLNode_CreationExtensions.m */,
+			);
+			name = Creation;
+			sourceTree = "<group>";
+		};
+		C9F281A916BBCC7300053942 /* Translator */ = {
+			isa = PBXGroup;
+			children = (
+				C9F2819F16BBBC9F00053942 /* XBTranslator.h */,
+				C9F281A016BBBC9F00053942 /* XBTranslator.m */,
+				C9F281A216BBC12900053942 /* XBTranslatePopover.h */,
+				C9F281A316BBC12A00053942 /* XBTranslatePopover.m */,
+				C9F281A516BBC13E00053942 /* XBTranslatePopover.xib */,
+				C9F281A716BBC67600053942 /* translatePanel.png */,
+			);
+			name = Translator;
+			sourceTree = "<group>";
+		};
+		C9F281AA16BBD39900053942 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C9F2814C16BB10F800053942 /* GTMDefines.h */,
+				C9F2814D16BB10F800053942 /* GTMNSString+HTML.h */,
+				C9F2814E16BB10F800053942 /* GTMNSString+HTML.m */,
+				C9F2814F16BB10F800053942 /* NSString+HTML.h */,
+				C9F2815016BB10F800053942 /* NSString+HTML.m */,
+				C9F2815716BB10F800053942 /* ZipArchive.h */,
+				C9F2815816BB10F800053942 /* ZipArchive.mm */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9D71D2E16B7F8C400AB00C2 /* xBook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9D71D5816B7F8C400AB00C2 /* Build configuration list for PBXNativeTarget "xBook" */;
+			buildPhases = (
+				C9D71D2B16B7F8C400AB00C2 /* Sources */,
+				C9D71D2C16B7F8C400AB00C2 /* Frameworks */,
+				C9D71D2D16B7F8C400AB00C2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = xBook;
+			productName = xBook;
+			productReference = C9D71D2F16B7F8C400AB00C2 /* xBook.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9D71D2716B7F8C400AB00C2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = XB;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = xomox;
+			};
+			buildConfigurationList = C9D71D2A16B7F8C400AB00C2 /* Build configuration list for PBXProject "xBook" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C9D71D2616B7F8C400AB00C2;
+			productRefGroup = C9D71D3016B7F8C400AB00C2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9D71D2E16B7F8C400AB00C2 /* xBook */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9D71D2D16B7F8C400AB00C2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9D71D3D16B7F8C400AB00C2 /* InfoPlist.strings in Resources */,
+				C9D71D4516B7F8C400AB00C2 /* Default.png in Resources */,
+				C9D71D4716B7F8C400AB00C2 /* Default@2x.png in Resources */,
+				C9D71D4916B7F8C400AB00C2 /* Default-568h@2x.png in Resources */,
+				C9D71D6E16B8021400AB00C2 /* book.epub in Resources */,
+				C9D71DA716B8817B00AB00C2 /* 124929-matte-white-square-icon-culture-book3-open.png in Resources */,
+				C9D71DA916B8821800AB00C2 /* Копия 124929-matte-white-square-icon-culture-book3-open.png in Resources */,
+				C9F2819316BBAB2600053942 /* EPubView.xib in Resources */,
+				C9F2819A16BBAE9800053942 /* XBRootViewController.xib in Resources */,
+				C9F2819D16BBB29600053942 /* ChapterListViewController.xib in Resources */,
+				C9F2819E16BBB29600053942 /* SearchResultsViewController.xib in Resources */,
+				C9F281A616BBC13E00053942 /* XBTranslatePopover.xib in Resources */,
+				C9F281A816BBC67700053942 /* translatePanel.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9D71D2B16B7F8C400AB00C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9F2818716BB144100053942 /* CXMLNode_CreationExtensions.m in Sources */,
+				C9F2818816BB144100053942 /* CXMLDocument_PrivateExtensions.m in Sources */,
+				C9F2818916BB144100053942 /* CXMLDocument.m in Sources */,
+				C9F2818A16BB144100053942 /* CXMLElement_CreationExtensions.m in Sources */,
+				C9F2818B16BB144100053942 /* CXMLElement_ElementTreeExtensions.m in Sources */,
+				C9F2818C16BB144100053942 /* CXMLElement.m in Sources */,
+				C9F2818D16BB144100053942 /* CXMLNamespaceNode.m in Sources */,
+				C9F2818E16BB144100053942 /* CXMLNode_PrivateExtensions.m in Sources */,
+				C9F2818F16BB144100053942 /* CXMLNode_XPathExtensions.m in Sources */,
+				C9F2819016BB144100053942 /* CXMLNode.m in Sources */,
+				C9F2819116BB144100053942 /* CTidy.m in Sources */,
+				C9F2818616BB141500053942 /* CXHTMLDocument.m in Sources */,
+				C9F2818516BB140200053942 /* CXMLDocument_CreationExtensions.m in Sources */,
+				C9D71D3F16B7F8C400AB00C2 /* main.m in Sources */,
+				C9D71D4316B7F8C400AB00C2 /* XBAppDelegate.m in Sources */,
+				C9D71D8816B806C100AB00C2 /* SSZipArchive.m in Sources */,
+				C9D71D9416B8072C00AB00C2 /* ioapi.c in Sources */,
+				C9D71D9516B8072C00AB00C2 /* mztools.c in Sources */,
+				C9D71D9616B8072C00AB00C2 /* unzip.c in Sources */,
+				C9D71D9716B8072C00AB00C2 /* zip.c in Sources */,
+				C9F2814616BB10A400053942 /* Chapter.m in Sources */,
+				C9F2814716BB10A400053942 /* EPub.m in Sources */,
+				C9F2814816BB10A400053942 /* EPubViewController.m in Sources */,
+				C9F2815916BB10F800053942 /* ChapterListViewController.m in Sources */,
+				C9F2815A16BB10F800053942 /* GTMNSString+HTML.m in Sources */,
+				C9F2815B16BB10F800053942 /* NSString+HTML.m in Sources */,
+				C9F2815C16BB10F800053942 /* SearchResult.m in Sources */,
+				C9F2815D16BB10F800053942 /* SearchResultsViewController.m in Sources */,
+				C9F2815E16BB10F800053942 /* UIWebView+SearchWebView.m in Sources */,
+				C9F2815F16BB10F800053942 /* ZipArchive.mm in Sources */,
+				C9F2819916BBAE9800053942 /* XBRootViewController.m in Sources */,
+				C9F281A116BBBCA000053942 /* XBTranslator.m in Sources */,
+				C9F281A416BBC12B00053942 /* XBTranslatePopover.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C9D71D3B16B7F8C400AB00C2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9D71D3C16B7F8C400AB00C2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9D71D5616B7F8C400AB00C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C9D71D5716B7F8C400AB00C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9D71D5916B7F8C400AB00C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xBook/xBook-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "xBook/xBook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9D71D5A16B7F8C400AB00C2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "xBook/xBook-Prefix.pch";
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "xBook/xBook-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9D71D2A16B7F8C400AB00C2 /* Build configuration list for PBXProject "xBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D71D5616B7F8C400AB00C2 /* Debug */,
+				C9D71D5716B7F8C400AB00C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9D71D5816B7F8C400AB00C2 /* Build configuration list for PBXNativeTarget "xBook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9D71D5916B7F8C400AB00C2 /* Debug */,
+				C9D71D5A16B7F8C400AB00C2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9D71D2716B7F8C400AB00C2 /* Project object */;
+}
