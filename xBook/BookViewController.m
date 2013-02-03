@@ -152,8 +152,6 @@
   webView.hidden = NO;
   pageForReturn.currentSpineIndex = currentSpineIndex;
   pageForReturn.currentPageInSpineIndex = currentPageInSpineIndex;
-  //[webView setOpaque:NO];
-	
 }
 
 - (void) gotoNextSpine {
@@ -175,8 +173,7 @@
 - (void) gotoNextPage {
 	if(!paginating){
 		if(currentPageInSpineIndex+1<pagesInCurrentSpineCount){
-      [self loadSpine:currentSpineIndex atPageIndex:0];
-			[self gotoPageInCurrentSpine:++currentPageInSpineIndex];
+      [self loadSpine:currentSpineIndex atPageIndex:++currentPageInSpineIndex];
 		} else {
 			[self gotoNextSpine];
 		}
@@ -185,8 +182,8 @@
 
 - (void) gotoPrevPage {
 	if (!paginating) {
-		if(currentPageInSpineIndex-1>=0){
-			[self gotoPageInCurrentSpine:--currentPageInSpineIndex];
+		if(currentPageInSpineIndex - 1 >= 0){
+      [self loadSpine:currentSpineIndex atPageIndex:--currentPageInSpineIndex];
 		} else {
 			if(currentSpineIndex!=0){
 				int targetPage = [[loadedEpub.spineArray objectAtIndex:(currentSpineIndex-1)] pageCount];
@@ -320,6 +317,7 @@
 
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController {
+  NSLog(@"Loading next page");
   // prepearing for next page loading
   PageViewController *lastPage;
   if ([viewController isKindOfClass:[PageViewController class]]) {
@@ -352,11 +350,15 @@
   
   // then turn the last page next
   [self gotoNextPage];
-  
+//  pageForReturn.currentSpineIndex = currentSpineIndex;
+//  pageForReturn.currentPageInSpineIndex = currentPageInSpineIndex;
+  NSLog(@"Returning next page");
   return pageForReturn;
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
+  NSLog(@"Loading previous page");
+
   // prepearing for previous page loading
   PageViewController *lastPage;
   if ([viewController isKindOfClass:[PageViewController class]]) {
@@ -386,7 +388,9 @@
   
   // then turn the last page next
   [self gotoPrevPage];
-  
+
+  NSLog(@"Returning previous page");
+
   return pageForReturn;
 }
 
