@@ -36,6 +36,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self.view addSubview:self.webView];
+  pageNumber = [parameters[@"PageNumber"] integerValue];
   self.pageNumberLabel.text = [NSString stringWithFormat:@"%d", pageNumber];
 }
 
@@ -61,6 +62,9 @@
 - (IBAction)decTextSizePressed:(id)sender {
 }
 - (IBAction)incTextSizePressed:(id)sender {
+}
+- (IBAction)backButtonPressed:(id)sender {
+  [[NSNotificationCenter defaultCenter]postNotificationName:@"Back" object:nil];
 }
 
 @end

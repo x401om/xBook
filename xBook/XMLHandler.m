@@ -8,6 +8,7 @@
 
 
 #import "XMLHandler.h"
+#import "Chapter.h"
 
 
 @implementation XMLHandler
@@ -17,11 +18,21 @@
   return _epubContent;
 }
 
-- (void)parseXMLFileAt:(NSString*)strPath{
+- (NSString *)getPathForFileWithPath:(NSString *)filePath {
+  NSMutableArray *components = [[filePath componentsSeparatedByString:@"/"] mutableCopy];
+  [components removeLastObject];
+  NSString *path = @"";
+  for (int i = 0; i < components.count; ++i) {
+    path = [path stringByAppendingFormat:@"%@/", components[i]];
+  }
+  return path;
+}
 
-	_parser=[[NSXMLParser alloc] initWithContentsOfURL:[NSURL fileURLWithPath:strPath]];
+- (void)parseXMLFileAt:(NSString*)strPath{
+  _currentDirPath = [self getPathForFileWithPath:strPath];
+	_parser = [[NSXMLParser alloc] initWithContentsOfURL:[NSURL fileURLWithPath:strPath]];
 	_parser.delegate=self;
-	[_parser parse];
+  [_parser parse];
 }
 
 - (void)parser:(NSXMLParser *)parser parseErrorOccurred:(NSError *)parseError {
@@ -64,8 +75,10 @@
 	}
 	
 	if ([elementName isEqualToString:@"item"]) {
-		
-		[_itemDictionary setValue:[attributeDict valueForKey:@"href"] forKey:[attributeDict valueForKey:@"id"]];
+		// media-type="application/xhtml+xml"
+    if ([attributeDict[@"media-type"] isEqualToString:@"application/xhtml+xml"]) {
+      [_itemDictionary setValue:[attributeDict valueForKey:@"href"] forKey:[attributeDict valueForKey:@"id"]];
+    }
 	}
 	
 	if ([elementName isEqualToString:@"spine"]) {
@@ -74,8 +87,12 @@
 	}
 	
 	if ([elementName isEqualToString:@"itemref"]) {
-		
-		[_spineArray addObject:[attributeDict valueForKey:@"idref"]];
+    NSString *idref = attributeDict[@"idref"];
+    if (_itemDictionary[idref]) {
+      NSString *href = [_currentDirPath stringByAppendingFormat:@"%@", _itemDictionary[idref]];
+      Chapter *newChapter = [[Chapter alloc]initWithPath:href title:nil chapterIndex:_spineArray.count];
+      [_spineArray addObject:newChapter];
+    }
 	}
 }
 
@@ -125,6 +142,6 @@
 }
 
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
-
+  
 }
 @end

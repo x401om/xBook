@@ -24,6 +24,7 @@
   XMLHandler *_handler;
   id<XBEpubHandlerDelegate> _delegate;
   EpubContent *_content;
+  NSString *_OPFDirectory;
 }
 
 

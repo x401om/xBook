@@ -27,7 +27,8 @@
 	NSMutableDictionary *_itemDictionary, *_metaInfo;
 	NSMutableArray *_spineArray;
   NSString *_tableOfContents, *_titlePage;
-
+  
+  NSString *_currentDirPath;
 }
 
 @property (nonatomic, retain) id<XMLHandlerDelegate> delegate;

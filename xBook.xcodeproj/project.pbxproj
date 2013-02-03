@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C913D2A116BF165400EE5FC7 /* XBBookSourceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C913D29F16BF165400EE5FC7 /* XBBookSourceViewController.m */; };
+		C913D2A216BF165400EE5FC7 /* XBBookSourceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C913D2A016BF165400EE5FC7 /* XBBookSourceViewController.xib */; };
+		C913D2A416BF1A6800EE5FC7 /* book1.epub in Resources */ = {isa = PBXBuildFile; fileRef = C913D2A316BF1A6800EE5FC7 /* book1.epub */; };
+		C913D2A616BF1A8100EE5FC7 /* book2.epub in Resources */ = {isa = PBXBuildFile; fileRef = C913D2A516BF1A8100EE5FC7 /* book2.epub */; };
+		C913D2A816BF1A9500EE5FC7 /* book3.epub in Resources */ = {isa = PBXBuildFile; fileRef = C913D2A716BF1A9500EE5FC7 /* book3.epub */; };
 		C919D0C816BE61B6005D123E /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C919D0C616BE61B6005D123E /* PageViewController.m */; };
 		C919D0C916BE61B6005D123E /* PageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C919D0C716BE61B6005D123E /* PageViewController.xib */; };
 		C919D0CB16BE675B005D123E /* XBRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C919D0CA16BE675B005D123E /* XBRootViewController.xib */; };
+		C919D0D316BF05E7005D123E /* XBEpubHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C919D0CE16BF05E5005D123E /* XBEpubHandler.m */; };
+		C919D0D416BF05E7005D123E /* EpubContent.m in Sources */ = {isa = PBXBuildFile; fileRef = C919D0D016BF05E6005D123E /* EpubContent.m */; };
+		C919D0D516BF05E7005D123E /* XMLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C919D0D216BF05E7005D123E /* XMLHandler.m */; };
 		C923DCD516BC6EB300EB68A9 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C923DCD316BC6EB200EB68A9 /* BookViewController.m */; };
 		C923DCD616BC6EB300EB68A9 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C923DCD416BC6EB300EB68A9 /* BookViewController.xib */; };
 		C9D71D3316B7F8C400AB00C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3216B7F8C400AB00C2 /* UIKit.framework */; };
@@ -63,10 +71,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C913D29E16BF165400EE5FC7 /* XBBookSourceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBBookSourceViewController.h; sourceTree = "<group>"; };
+		C913D29F16BF165400EE5FC7 /* XBBookSourceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBBookSourceViewController.m; sourceTree = "<group>"; };
+		C913D2A016BF165400EE5FC7 /* XBBookSourceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XBBookSourceViewController.xib; sourceTree = "<group>"; };
+		C913D2A316BF1A6800EE5FC7 /* book1.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = book1.epub; sourceTree = "<group>"; };
+		C913D2A516BF1A8100EE5FC7 /* book2.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = book2.epub; sourceTree = "<group>"; };
+		C913D2A716BF1A9500EE5FC7 /* book3.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = book3.epub; sourceTree = "<group>"; };
 		C919D0C516BE61B6005D123E /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		C919D0C616BE61B6005D123E /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 		C919D0C716BE61B6005D123E /* PageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PageViewController.xib; sourceTree = "<group>"; };
 		C919D0CA16BE675B005D123E /* XBRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XBRootViewController.xib; sourceTree = "<group>"; };
+		C919D0CD16BF05E5005D123E /* XBEpubHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBEpubHandler.h; sourceTree = "<group>"; };
+		C919D0CE16BF05E5005D123E /* XBEpubHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBEpubHandler.m; sourceTree = "<group>"; };
+		C919D0CF16BF05E6005D123E /* EpubContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EpubContent.h; sourceTree = "<group>"; };
+		C919D0D016BF05E6005D123E /* EpubContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EpubContent.m; sourceTree = "<group>"; };
+		C919D0D116BF05E6005D123E /* XMLHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLHandler.h; sourceTree = "<group>"; };
+		C919D0D216BF05E7005D123E /* XMLHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLHandler.m; sourceTree = "<group>"; };
 		C923DCD216BC6EB200EB68A9 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		C923DCD316BC6EB200EB68A9 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		C923DCD416BC6EB300EB68A9 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
@@ -176,6 +196,9 @@
 		C919D0CC16BEF211005D123E /* BookSource */ = {
 			isa = PBXGroup;
 			children = (
+				C913D29E16BF165400EE5FC7 /* XBBookSourceViewController.h */,
+				C913D29F16BF165400EE5FC7 /* XBBookSourceViewController.m */,
+				C913D2A016BF165400EE5FC7 /* XBBookSourceViewController.xib */,
 				C923DCD216BC6EB200EB68A9 /* BookViewController.h */,
 				C923DCD316BC6EB200EB68A9 /* BookViewController.m */,
 				C923DCD416BC6EB300EB68A9 /* BookViewController.xib */,
@@ -230,6 +253,12 @@
 				C919D0CA16BE675B005D123E /* XBRootViewController.xib */,
 				C919D0CC16BEF211005D123E /* BookSource */,
 				C9D71D9B16B83C4200AB00C2 /* ZipArchive */,
+				C919D0D116BF05E6005D123E /* XMLHandler.h */,
+				C919D0D216BF05E7005D123E /* XMLHandler.m */,
+				C919D0CD16BF05E5005D123E /* XBEpubHandler.h */,
+				C919D0CE16BF05E5005D123E /* XBEpubHandler.m */,
+				C919D0CF16BF05E6005D123E /* EpubContent.h */,
+				C919D0D016BF05E6005D123E /* EpubContent.m */,
 			);
 			path = xBook;
 			sourceTree = "<group>";
@@ -237,6 +266,9 @@
 		C9D71D3916B7F8C400AB00C2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C913D2A316BF1A6800EE5FC7 /* book1.epub */,
+				C913D2A516BF1A8100EE5FC7 /* book2.epub */,
+				C913D2A716BF1A9500EE5FC7 /* book3.epub */,
 				C9D71D6D16B8021400AB00C2 /* book.epub */,
 				C9D71D3A16B7F8C400AB00C2 /* xBook-Info.plist */,
 				C9D71D3B16B7F8C400AB00C2 /* InfoPlist.strings */,
@@ -442,6 +474,10 @@
 				C923DCD616BC6EB300EB68A9 /* BookViewController.xib in Resources */,
 				C919D0C916BE61B6005D123E /* PageViewController.xib in Resources */,
 				C919D0CB16BE675B005D123E /* XBRootViewController.xib in Resources */,
+				C913D2A216BF165400EE5FC7 /* XBBookSourceViewController.xib in Resources */,
+				C913D2A416BF1A6800EE5FC7 /* book1.epub in Resources */,
+				C913D2A616BF1A8100EE5FC7 /* book2.epub in Resources */,
+				C913D2A816BF1A9500EE5FC7 /* book3.epub in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +522,10 @@
 				C9F281A416BBC12B00053942 /* XBTranslatePopover.m in Sources */,
 				C923DCD516BC6EB300EB68A9 /* BookViewController.m in Sources */,
 				C919D0C816BE61B6005D123E /* PageViewController.m in Sources */,
+				C919D0D316BF05E7005D123E /* XBEpubHandler.m in Sources */,
+				C919D0D416BF05E7005D123E /* EpubContent.m in Sources */,
+				C919D0D516BF05E7005D123E /* XMLHandler.m in Sources */,
+				C913D2A116BF165400EE5FC7 /* XBBookSourceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

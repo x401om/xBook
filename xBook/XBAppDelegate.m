@@ -33,6 +33,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
   [self copyToDocumentsFile:@"book" ofType:@"epub"];
+  [self copyToDocumentsFile:@"book1" ofType:@"epub"];
+  [self copyToDocumentsFile:@"book2" ofType:@"epub"];
+  [self copyToDocumentsFile:@"book3" ofType:@"epub"];
+
   UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:[[XBRootViewController alloc]init]];
   nav.navigationBarHidden = YES;
   self.window.rootViewController = nav;

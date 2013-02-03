@@ -7,6 +7,7 @@
 //
 
 #import "XBEpubHandler.h"
+#import "Chapter.h"
 
 @implementation XBEpubHandler
 
@@ -85,6 +86,8 @@
   }
 }
 
+
+
 #pragma mark XMLHandlerDelagete Methods
 
 - (void)foundRootPath:(NSString *)rootPath {
@@ -93,9 +96,9 @@
 }
 
 - (void)finishedParsing:(EpubContent *)ePubContents {
-  ePubContents._directoryPath = _directoryPath;
-  NSDictionary *dataForSave = [ePubContents archiveToDictionary];
-  [dataForSave writeToFile:[_directoryPath stringByAppendingString:@"/ContentData.plist"] atomically:YES];
+ // ePubContents._directoryPath = _directoryPath;
+ // NSDictionary *dataForSave = [ePubContents archiveToDictionary];
+ // [dataForSave writeToFile:[_directoryPath stringByAppendingString:@"/ContentData.plist"] atomically:YES];
   if ([_delegate respondsToSelector:@selector(handledBook:)]) {
     [_delegate handledBook:ePubContents];
   }

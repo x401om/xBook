@@ -7,10 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BookViewController.h"
 
-@interface XBRootViewController : UIViewController <UIPageViewControllerDelegate, BookViewControllerDelegate>
-
-@property BookViewController *pageViewController;
+@interface XBRootViewController : UIViewController 
 
 @end

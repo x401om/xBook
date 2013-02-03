@@ -321,7 +321,6 @@
 
 - (PageViewController *)pageWithIndex:(int)index {
   pageForReturn = [[PageViewController alloc]init];
-  
   // set webview delegate to self for successfully loading page in the next steps
   
   self.webView = pageForReturn.webView;
@@ -346,6 +345,7 @@
   pageForReturn.currentSpineIndex = currentSpineIndex;
   pageForReturn.currentPageInSpineIndex = currentPageInSpineIndex;
 //  NSLog(@"Returning page with %d spineIndex and %d page", pageForReturn.currentSpineIndex, currentPageInSpineIndex);
+  pageForReturn.parameters = @{@"PageNumber": [NSNumber numberWithInt:index]};
   return pageForReturn;
 }
 
@@ -386,6 +386,7 @@
   pageForReturn.currentSpineIndex = currentSpineIndex;
   pageForReturn.currentPageInSpineIndex = currentPageInSpineIndex;
 //  NSLog(@"Returning page with %d spineIndex and %d page", pageForReturn.currentSpineIndex, currentPageInSpineIndex);
+  pageForReturn.parameters = @{@"PageNumber": [NSNumber numberWithInt:[self getGlobalPageCount]]};
   return pageForReturn;
 }
 
@@ -420,7 +421,8 @@
   [self gotoPrevPage];
   pageForReturn.currentSpineIndex = currentSpineIndex;
   pageForReturn.currentPageInSpineIndex = currentPageInSpineIndex;
-  NSLog(@"Returning page with %d spineIndex and %d page", pageForReturn.currentSpineIndex, currentPageInSpineIndex);
+//  NSLog(@"Returning page with %d spineIndex and %d page", pageForReturn.currentSpineIndex, currentPageInSpineIndex);
+  pageForReturn.parameters = @{@"PageNumber": [NSNumber numberWithInt:[self getGlobalPageCount]]};
   return pageForReturn;
 }
 
@@ -474,7 +476,5 @@
 	
 	[self gotoPageInCurrentSpine:currentPageInSpineIndex];
 }
-
-
 
 @end
