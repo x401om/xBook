@@ -20,6 +20,5 @@
 @property NSDictionary *parameters;
 @property int currentSpineIndex, currentPageInSpineIndex;
 
-- (id)initWithParameters:(NSDictionary *)params;
 
 @end

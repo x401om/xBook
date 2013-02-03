@@ -15,9 +15,8 @@
 @implementation PageViewController
 @synthesize pageNumberLabel, webView, titleLabel, parameters;
 
-- (id)initWithParameters:(NSDictionary *)params {
+- (id)init {
   self = [[PageViewController alloc]initWithNibName:@"PageViewController" bundle:[NSBundle mainBundle]];
-  pageNumber = [params[@"PageNumber"] intValue];
   return self;
 }
 

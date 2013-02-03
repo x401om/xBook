@@ -7,13 +7,13 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "xBook/BookViewController.m"
-         timestampString = "381602237.826954"
+         filePath = "xBook/XBRootViewController.m"
+         timestampString = "381614943.004286"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "118"
-         endingLineNumber = "118"
-         landmarkName = "-loadSpine:atPageIndex:highlightSearchResult:"
+         startingLineNumber = "91"
+         endingLineNumber = "91"
+         landmarkName = "-paginationDone"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -21,12 +21,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "xBook/BookViewController.m"
-         timestampString = "381604330.983641"
+         timestampString = "381615689.693338"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "279"
-         endingLineNumber = "279"
-         landmarkName = "-updatePagination"
+         startingLineNumber = "402"
+         endingLineNumber = "402"
+         landmarkName = "-pageViewController:viewControllerBeforeViewController:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -34,64 +34,12 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "xBook/BookViewController.m"
-         timestampString = "381599592.332484"
+         timestampString = "381615926.93068"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "79"
-         endingLineNumber = "79"
-         landmarkName = "-loadEpubWithName:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "xBook/BookViewController.m"
-         timestampString = "381600689.60027"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "53"
-         endingLineNumber = "53"
-         landmarkName = "-viewDidLoad"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "xBook/BookViewController.m"
-         timestampString = "381604330.983641"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "337"
-         endingLineNumber = "337"
+         startingLineNumber = "364"
+         endingLineNumber = "364"
          landmarkName = "-pageViewController:viewControllerAfterViewController:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "xBook/BookViewController.m"
-         timestampString = "381604330.983641"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "320"
-         endingLineNumber = "320"
-         landmarkName = "-pageViewController:viewControllerAfterViewController:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "Yes"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         filePath = "xBook/BookViewController.m"
-         timestampString = "381604202.531313"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "135"
-         endingLineNumber = "135"
-         landmarkName = "-gotoPageInCurrentSpine:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

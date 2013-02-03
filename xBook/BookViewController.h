@@ -13,13 +13,27 @@
 #import "XBTranslatePopover.h"
 #import "PageViewController.h"
 
+@protocol BookViewControllerDelegate <NSObject>
+
+@optional
+
+- (void)paginationDone;
+
+@end
+
 @class SearchResultsViewController;
 @class SearchResult;
+
 
 @interface BookViewController : UIPageViewController <UIPageViewControllerDataSource, UIWebViewDelegate, ChapterDelegate> {
   UIToolbar *toolbar;
   PageViewController *pageForReturn;
-	//UIWebView *webView;
+  
+  // parameters
+  int currentTextSize;
+  NSString *bookName;
+  int startingPage;
+  CGRect shownRect;
   
   UIBarButtonItem* chapterListButton;
 	
@@ -33,7 +47,6 @@
 	int currentSpineIndex;
 	int currentPageInSpineIndex;
 	int pagesInCurrentSpineCount;
-	int currentTextSize;
 	int totalPagesCount;
   
   BOOL epubLoaded;
@@ -68,6 +81,7 @@
 
 @property BOOL searching;
 
+@property id<BookViewControllerDelegate> bookDelegate;
 
 - (IBAction)showChapterIndex:(id)sender;
 - (IBAction)increaseTextSizeClicked:(id)sender;
@@ -83,6 +97,8 @@
 
 - (void)loadEpubWithName:(NSString *)epubName;
 
+- (void)setOptions:(NSDictionary *)options;
 
+- (PageViewController *)pageWithIndex:(int)index;
 
 @end

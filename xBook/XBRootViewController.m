@@ -34,37 +34,17 @@
     [super viewDidLoad];
   self.pageViewController = [[BookViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:@{UIPageViewControllerOptionInterPageSpacingKey: @30}];
   self.pageViewController.delegate = self;
-  loaded = NO;
-//  startingVC = [[EPubViewController alloc]init];
-//  [self addChildViewController:startingVC];
-//  [self.view addSubview:startingVC.view];
-//  startingVC.webView.delegate = self;
-//  [startingVC loadEpubWithName:@"book"];
-//  
-  UIViewController *startingViewController = [[UIViewController alloc]init];
-  
-  NSArray *viewControllers = @[startingViewController];
-  [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
-  
-//  self.pageViewController.dataSource = self.modelController;
-//  
+  self.pageViewController.bookDelegate = self;
+  [self.pageViewController setOptions:@{@"BookName": @"book", @"FontSize": @120}];
+
   [self addChildViewController:self.pageViewController];
   [self.view addSubview:self.pageViewController.view];
   
   // Add the page view controller's gesture recognizers to the book view controller's view so that the gestures are started more easily.
   self.view.gestureRecognizers = self.pageViewController.gestureRecognizers;
-    // Do any additional setup after loading the view from its nib.
 }
 
-- (XBModelController *)modelController
-{
-  // Return the model controller object, creating it if necessary.
-  // In more complex implementations, the model controller may be passed to the view controller.
-  if (!_modelController) {
-    //_modelController = [[XBModelController alloc] init];
-  }
-  return _modelController;
-}
+
 
 - (UIPageViewControllerSpineLocation)pageViewController:(UIPageViewController *)pageViewController spineLocationForInterfaceOrientation:(UIInterfaceOrientation)orientation
 {
@@ -102,29 +82,15 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)openBookButtonPressed:(id)sender {
-//  EPubViewController *epub = [[EPubViewController alloc]init];
-//  [self.navigationController pushViewController:epub animated:YES];
-//  [epub loadEpubWithName:@"book"];
+
+
+- (void)paginationDone {
   
+  PageViewController *startingViewController = [pageViewController pageWithIndex:343];
+  
+  NSArray *viewControllers = @[startingViewController];
+  [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView {
-  if (loaded) {
-    return;
-  }
-  loaded = YES;
-  self.pageViewController.dataSource = self.modelController;
-  
-  [self addChildViewController:self.pageViewController];
-  [self.view addSubview:self.pageViewController.view];
-  
-  // Set the page view controller's bounds using an inset rect so that self's view is visible around the edges of the pages.
-  CGRect pageViewRect = self.view.bounds;
-  pageViewRect = CGRectInset(pageViewRect, 0, 0);
-  self.pageViewController.view.frame = pageViewRect;
-  
-  [self.pageViewController didMoveToParentViewController:self];
-}
 
 @end
