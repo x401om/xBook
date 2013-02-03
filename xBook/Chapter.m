@@ -38,7 +38,7 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     NSLog(@"%@", error);
-	//[webView dealloc];
+	[webView dealloc];
 }
 
 - (void) webViewDidFinishLoad:(UIWebView*)webView{
@@ -75,7 +75,7 @@
 	
 //    NSLog(@"Chapter %d: %@ -> %d pages", chapterIndex, title, pageCount);
     
-    //[webView dealloc];
+    [webView dealloc];
   if ([delegate respondsToSelector:@selector(chapterDidFinishLoad:)]) {
     [delegate chapterDidFinishLoad:self];
   }
@@ -83,11 +83,34 @@
 }
 
 - (void)dealloc {
-//    [title release];
-//	[spinePath release];
-//	[text release];
-//    [super dealloc];
+    [title release];
+	[spinePath release];
+	[text release];
+    [super dealloc];
 }
 
+- (id)initWithDictionary:(NSDictionary *)dict {
+  spinePath = dict[@"SpinePath"];
+  title = dict[@"Title"];
+  text = dict[@"Text"];
+  pageCount = [dict[@"PageCount"] integerValue];
+  chapterIndex = [dict[@"ChapterIndex"] integerValue];
+  fontPercentSize = [dict[@"FontPercentSize"] integerValue];
+  windowSize = [dict[@"WindowSize"] CGRectValue];
+  return self;
+}
+
+- (NSDictionary *)dictionary {
+  if (!title) {
+    title = @"";
+  }
+  return @{@"SpineParh": spinePath,
+           @"Title": title,
+           @"Text": text,
+           @"PageCount":[NSNumber numberWithInt:pageCount],
+           @"ChapterIndex":[NSNumber numberWithInt:chapterIndex],
+           @"WindowSize":[NSValue valueWithCGRect:windowSize] ,
+           @"FontPercentSize":[NSNumber numberWithInt:fontPercentSize]};
+}
 
 @end

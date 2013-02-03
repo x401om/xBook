@@ -11,14 +11,15 @@
 #import "EPub.h"
 #import "Chapter.h"
 #import "XBTranslatePopover.h"
+#import "PageViewController.h"
 
 @class SearchResultsViewController;
 @class SearchResult;
 
 @interface BookViewController : UIPageViewController <UIPageViewControllerDataSource, UIWebViewDelegate, ChapterDelegate> {
   UIToolbar *toolbar;
-  
-	UIWebView *webView;
+  PageViewController *pageForReturn;
+	//UIWebView *webView;
   
   UIBarButtonItem* chapterListButton;
 	
@@ -28,7 +29,7 @@
   UISlider* pageSlider;
   UILabel* currentPageLabel;
   
-	EPub* loadedEpub;
+	//EPub* loadedEpub;
 	int currentSpineIndex;
 	int currentPageInSpineIndex;
 	int pagesInCurrentSpineCount;
@@ -38,6 +39,7 @@
   BOOL epubLoaded;
   BOOL paginating;
   BOOL searching;
+  BOOL needPaginate;
   
   UIPopoverController* chaptersPopover;
   UIPopoverController* searchResultsPopover;
@@ -61,6 +63,9 @@
 
 @property (nonatomic, retain) IBOutlet UISlider *pageSlider;
 @property (nonatomic, retain) IBOutlet UILabel *currentPageLabel;
+
+@property BOOL searching;
+
 
 - (IBAction)showChapterIndex:(id)sender;
 - (IBAction)increaseTextSizeClicked:(id)sender;
