@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PageViewController : UIViewController 
+@interface PageViewController : UIViewController {
+  int pageNumber;
+}
 
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;

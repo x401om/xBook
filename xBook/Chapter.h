@@ -11,7 +11,7 @@
 
 @protocol ChapterDelegate <NSObject>
 @required
-- (void) chapterDidFinishLoad:(Chapter *)chapter;
+- (void) chapterDidFinishLoad:(Chapter*)chapter;
 @end
 
 @interface Chapter : NSObject <UIWebViewDelegate>{
@@ -33,8 +33,5 @@
 - (id) initWithPath:(NSString*)theSpinePath title:(NSString*)theTitle chapterIndex:(int) theIndex;
 
 - (void) loadChapterWithWindowSize:(CGRect)theWindowSize fontPercentSize:(int) theFontPercentSize;
-
-- (NSDictionary *)dictionary;
-- (id)initWithDictionary:(NSDictionary *)dict;
 
 @end

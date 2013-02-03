@@ -12,7 +12,6 @@
 
 @interface EPub : NSObject {
   NSString *epubName;
-  BOOL paged;
 	NSArray* spineArray;
 	NSString* epubFilePath;
 }

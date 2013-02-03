@@ -31,29 +31,6 @@
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *bookPath = [documentsDirectory stringByAppendingFormat:@"/%@.epub", name];
-    NSString *bookDirPath = [documentsDirectory stringByAppendingFormat:@"/%@", name];
-    NSFileManager *fileManager = [[NSFileManager alloc]init];
-    if ([fileManager fileExistsAtPath:bookDirPath]) {
-      NSString *parsedPlistPath = [bookDirPath stringByAppendingFormat:@"/Parsed.plist"];
-      if ([fileManager fileExistsAtPath:parsedPlistPath]) {
-        NSDictionary *epubDict = [NSDictionary dictionaryWithContentsOfFile:parsedPlistPath];
-        if (epubDict) {
-          NSArray *spins = epubDict[@"SpineArray"];
-          NSMutableArray *newSpineArray = [NSMutableArray arrayWithCapacity:spins.count];
-          for (NSDictionary *chapterDict in spins) {
-            Chapter *newChapter = [[Chapter alloc]initWithDictionary:chapterDict];
-            [newSpineArray addObject:newChapter];
-          }
-          spineArray = newSpineArray;
-          epubFilePath = epubDict[@"FilePath"];
-          epubName = epubDict[@"Name"];
-          paged = [epubDict[@"Paged"] boolValue];
-          return self;
-        }
-      }
-    }
-    NSLog(@"Need parse new directory");
-
 		epubFilePath = bookPath;
 		spineArray = [[NSMutableArray alloc] init];
 		[self parseEpub];
@@ -69,6 +46,13 @@
 
 - (void)unzipAndSaveFileNamed:(NSString *)fileName{
 	ZipArchive* za = [[ZipArchive alloc] init];
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+  NSString *documentsDirectory = [paths objectAtIndex:0];
+  NSFileManager *fileManager = [[NSFileManager alloc]init];
+  NSString *bookDirPath = [documentsDirectory stringByAppendingFormat:@"/%@", epubName];
+  if ([fileManager fileExistsAtPath:bookDirPath]) {
+    return;
+  }
 	if([za UnzipOpenFile:epubFilePath]) {
 		NSString *strPath=[NSString stringWithFormat:@"%@/%@",[self applicationDocumentsDirectory], epubName];
 		//Delete all the previous files
@@ -148,18 +132,6 @@
 		[tmpArray addObject:tmpChapter];
 	}
 	self.spineArray = [NSArray arrayWithArray:tmpArray];
-
-  NSMutableArray *spins = [NSMutableArray arrayWithCapacity:spineArray.count];
-  for (Chapter *curChapter in spineArray) {
-    [spins addObject:[curChapter dictionary]];
-  }
-  NSDictionary *dictToSave = @{@"SpineArray": spins, @"FilePath": epubFilePath, @"Name": epubName, @"Paged": @NO };
-
-  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-  NSString *documentsDirectory = [paths objectAtIndex:0];
-  NSString *bookDirPath = [documentsDirectory stringByAppendingFormat:@"/%@", epubName];
-  NSString *parsedPlistPath = [bookDirPath stringByAppendingFormat:@"/Parsed.plist"];
-  [dictToSave writeToFile:parsedPlistPath atomically:YES];
 }
 
 @end

@@ -15,7 +15,7 @@
 #import "XBTranslator.h"
 
 @implementation BookViewController
-@synthesize loadedEpub, toolbar, webView;
+@synthesize toolbar, webView;
 @synthesize chapterListButton, decTextSizeButton, incTextSizeButton;
 @synthesize currentPageLabel, pageSlider, searching;
 @synthesize currentSearchResult;
@@ -74,7 +74,7 @@
   totalPagesCount = 0;
 	searching = NO;
   epubLoaded = NO;
-  self.loadedEpub = [[EPub alloc]initWithEpubName:epubName];
+  loadedEpub = [[EPub alloc]initWithEpubName:epubName];
   epubLoaded = YES;
   NSLog(@"loadEpub");
   needPaginate = YES;
@@ -209,6 +209,7 @@
 		}
 	}
 }
+
 - (IBAction) decreaseTextSizeClicked:(id)sender{
 	if(!paginating){
 		if(currentTextSize-25>=50){
@@ -278,7 +279,8 @@
       //[self loadSpine:currentSpineIndex atPageIndex:currentPageInSpineIndex];
       [[loadedEpub.spineArray objectAtIndex:0] setDelegate:self];
       CGRect size = self.webView.frame;
-      [[loadedEpub.spineArray objectAtIndex:0] loadChapterWithWindowSize:size fontPercentSize:currentTextSize];
+      Chapter *bufChapter = [loadedEpub.spineArray objectAtIndex:0];
+      [bufChapter loadChapterWithWindowSize:size fontPercentSize:currentTextSize];
       [currentPageLabel setText:@"?/?"];
     }
 	}
@@ -341,8 +343,7 @@
   
   // creating of new page parameters
   
-#warning TODO - Fill parameters !
-  NSDictionary *params = nil;
+  NSDictionary *params = @{@"PageNumber": [NSNumber numberWithInt:[self getGlobalPageCount]]};
   pageForReturn = [[PageViewController alloc]initWithParameters:params];
 
   // set webview delegate to self for successfully loading page in the next steps
@@ -356,17 +357,37 @@
 }
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController {
-  UIViewController *vc = [[UIViewController alloc] init];
-  UIWebView *webview = [[UIWebView alloc] init];
-  webview.delegate = self;
-  self.webView = webview;
-  [self gotoPrevPage];
-  webview.userInteractionEnabled = NO;
-
-
-  vc.view = webview;
+  // prepearing for previous page loading
+  PageViewController *lastPage;
+  if ([viewController isKindOfClass:[PageViewController class]]) {
+    lastPage = (PageViewController *)viewController;
+  }
   
-  return vc;
+  // check if lastPage was the first in the whole book
+  if (lastPage.currentSpineIndex == 0 && lastPage.currentPageInSpineIndex == 0) {
+    return nil;
+  }
+  
+  // if all is ok then reinitialize current indexes
+  
+  currentPageInSpineIndex = lastPage.currentPageInSpineIndex;
+  currentSpineIndex = lastPage.currentSpineIndex;
+  
+  // now creating the istance of new page
+  
+  // creating of new page parameters
+  
+  NSDictionary *params = @{@"PageNumber": [NSNumber numberWithInt:[self getGlobalPageCount]]};
+  pageForReturn = [[PageViewController alloc]initWithParameters:params];
+  
+  // set webview delegate to self for successfully loading page in the next steps
+  self.webView = pageForReturn.webView;
+  self.webView.delegate = self;
+  
+  // then turn the last page next
+  [self gotoPrevPage];
+  
+  return pageForReturn;
 }
 
 #pragma mark
@@ -376,6 +397,7 @@
   if (needPaginate) {
     needPaginate = NO;
     [self updatePagination];
+    return;
   }
 	//[self updatePagination];
 	NSString *varMySheet = @"var mySheet = document.styleSheets[0];";

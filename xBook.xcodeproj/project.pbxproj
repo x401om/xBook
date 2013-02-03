@@ -35,7 +35,6 @@
 		C9D71DA916B8821800AB00C2 /* Копия 124929-matte-white-square-icon-culture-book3-open.png in Resources */ = {isa = PBXBuildFile; fileRef = C9D71DA816B8821700AB00C2 /* Копия 124929-matte-white-square-icon-culture-book3-open.png */; };
 		C9F2814616BB10A400053942 /* Chapter.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814116BB10A400053942 /* Chapter.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9F2814716BB10A400053942 /* EPub.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814316BB10A400053942 /* EPub.m */; };
-		C9F2814816BB10A400053942 /* EPubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814516BB10A400053942 /* EPubViewController.m */; };
 		C9F2815916BB10F800053942 /* ChapterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814B16BB10F800053942 /* ChapterListViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9F2815A16BB10F800053942 /* GTMNSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2814E16BB10F800053942 /* GTMNSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9F2815B16BB10F800053942 /* NSString+HTML.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2815016BB10F800053942 /* NSString+HTML.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -57,7 +56,6 @@
 		C9F2818F16BB144100053942 /* CXMLNode_XPathExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817416BB11D800053942 /* CXMLNode_XPathExtensions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9F2819016BB144100053942 /* CXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817616BB11D800053942 /* CXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C9F2819116BB144100053942 /* CTidy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2817C16BB121200053942 /* CTidy.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C9F2819316BBAB2600053942 /* EPubView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F2819216BBAB2600053942 /* EPubView.xib */; };
 		C9F2819916BBAE9800053942 /* XBRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F2819716BBAE9800053942 /* XBRootViewController.m */; };
 		C9F2819D16BBB29600053942 /* ChapterListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F2819B16BBB29500053942 /* ChapterListViewController.xib */; };
 		C9F2819E16BBB29600053942 /* SearchResultsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9F2819C16BBB29600053942 /* SearchResultsViewController.xib */; };
@@ -112,8 +110,6 @@
 		C9F2814116BB10A400053942 /* Chapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chapter.m; sourceTree = "<group>"; };
 		C9F2814216BB10A400053942 /* EPub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPub.h; sourceTree = "<group>"; };
 		C9F2814316BB10A400053942 /* EPub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPub.m; sourceTree = "<group>"; };
-		C9F2814416BB10A400053942 /* EPubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPubViewController.h; sourceTree = "<group>"; };
-		C9F2814516BB10A400053942 /* EPubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPubViewController.m; sourceTree = "<group>"; };
 		C9F2814A16BB10F800053942 /* ChapterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChapterListViewController.h; sourceTree = "<group>"; };
 		C9F2814B16BB10F800053942 /* ChapterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChapterListViewController.m; sourceTree = "<group>"; };
 		C9F2814C16BB10F800053942 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
@@ -157,7 +153,6 @@
 		C9F2818016BB122700053942 /* CXMLNode_CreationExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CXMLNode_CreationExtensions.h; path = Source/Creation/CXMLNode_CreationExtensions.h; sourceTree = "<group>"; };
 		C9F2818116BB122700053942 /* CXMLNode_CreationExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CXMLNode_CreationExtensions.m; path = Source/Creation/CXMLNode_CreationExtensions.m; sourceTree = "<group>"; };
 		C9F2818316BB12D400053942 /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
-		C9F2819216BBAB2600053942 /* EPubView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EPubView.xib; sourceTree = "<group>"; };
 		C9F2819616BBAE9800053942 /* XBRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBRootViewController.h; sourceTree = "<group>"; };
 		C9F2819716BBAE9800053942 /* XBRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBRootViewController.m; sourceTree = "<group>"; };
 		C9F2819B16BBB29500053942 /* ChapterListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChapterListViewController.xib; sourceTree = "<group>"; };
@@ -292,21 +287,18 @@
 				C9F281AA16BBD39900053942 /* Extensions */,
 				C9F2814A16BB10F800053942 /* ChapterListViewController.h */,
 				C9F2814B16BB10F800053942 /* ChapterListViewController.m */,
+				C9F2819B16BBB29500053942 /* ChapterListViewController.xib */,
 				C9F2815116BB10F800053942 /* SearchResult.h */,
 				C9F2815216BB10F800053942 /* SearchResult.m */,
 				C9F2815316BB10F800053942 /* SearchResultsViewController.h */,
 				C9F2815416BB10F800053942 /* SearchResultsViewController.m */,
+				C9F2819C16BBB29600053942 /* SearchResultsViewController.xib */,
 				C9F2815516BB10F800053942 /* UIWebView+SearchWebView.h */,
 				C9F2815616BB10F800053942 /* UIWebView+SearchWebView.m */,
 				C9F2814016BB10A400053942 /* Chapter.h */,
 				C9F2814116BB10A400053942 /* Chapter.m */,
 				C9F2814216BB10A400053942 /* EPub.h */,
 				C9F2814316BB10A400053942 /* EPub.m */,
-				C9F2814416BB10A400053942 /* EPubViewController.h */,
-				C9F2814516BB10A400053942 /* EPubViewController.m */,
-				C9F2819216BBAB2600053942 /* EPubView.xib */,
-				C9F2819B16BBB29500053942 /* ChapterListViewController.xib */,
-				C9F2819C16BBB29600053942 /* SearchResultsViewController.xib */,
 			);
 			name = EpubHandler;
 			sourceTree = "<group>";
@@ -447,7 +439,6 @@
 				C9D71D6E16B8021400AB00C2 /* book.epub in Resources */,
 				C9D71DA716B8817B00AB00C2 /* 124929-matte-white-square-icon-culture-book3-open.png in Resources */,
 				C9D71DA916B8821800AB00C2 /* Копия 124929-matte-white-square-icon-culture-book3-open.png in Resources */,
-				C9F2819316BBAB2600053942 /* EPubView.xib in Resources */,
 				C9F2819D16BBB29600053942 /* ChapterListViewController.xib in Resources */,
 				C9F2819E16BBB29600053942 /* SearchResultsViewController.xib in Resources */,
 				C9F281A616BBC13E00053942 /* XBTranslatePopover.xib in Resources */,
@@ -488,7 +479,6 @@
 				C9D71D9716B8072C00AB00C2 /* zip.c in Sources */,
 				C9F2814616BB10A400053942 /* Chapter.m in Sources */,
 				C9F2814716BB10A400053942 /* EPub.m in Sources */,
-				C9F2814816BB10A400053942 /* EPubViewController.m in Sources */,
 				C9F2815916BB10F800053942 /* ChapterListViewController.m in Sources */,
 				C9F2815A16BB10F800053942 /* GTMNSString+HTML.m in Sources */,
 				C9F2815B16BB10F800053942 /* NSString+HTML.m in Sources */,

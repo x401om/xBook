@@ -89,28 +89,27 @@
     [super dealloc];
 }
 
-- (id)initWithDictionary:(NSDictionary *)dict {
-  spinePath = dict[@"SpinePath"];
-  title = dict[@"Title"];
-  text = dict[@"Text"];
-  pageCount = [dict[@"PageCount"] integerValue];
-  chapterIndex = [dict[@"ChapterIndex"] integerValue];
-  fontPercentSize = [dict[@"FontPercentSize"] integerValue];
-  windowSize = [dict[@"WindowSize"] CGRectValue];
-  return self;
-}
-
-- (NSDictionary *)dictionary {
-  if (!title) {
-    title = @"";
-  }
-  return @{@"SpineParh": spinePath,
-           @"Title": title,
-           @"Text": text,
-           @"PageCount":[NSNumber numberWithInt:pageCount],
-           @"ChapterIndex":[NSNumber numberWithInt:chapterIndex],
-           @"WindowSize":[NSValue valueWithCGRect:windowSize] ,
-           @"FontPercentSize":[NSNumber numberWithInt:fontPercentSize]};
-}
+//- (id)initWithDictionary:(NSDictionary *)dict {
+//  spinePath = dict[@"SpinePath"];
+//  title = dict[@"Title"];
+//  text = dict[@"Text"];
+//  pageCount = [dict[@"PageCount"] integerValue];
+//  chapterIndex = [dict[@"ChapterIndex"] integerValue];
+//  fontPercentSize = [dict[@"FontPercentSize"] integerValue];
+//  windowSize = [[NSKeyedUnarchiver unarchiveObjectWithData:dict[@"WindowSize"]]CGRectValue] ;
+//  return self;
+//}
+//
+//- (NSDictionary *)dictionary {
+//  NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:7];
+//  dict[@"PageCount"] = [NSNumber numberWithInt:self.pageCount];
+//  dict[@"ChapterIndex"] = [NSNumber numberWithInt:self.chapterIndex];
+//  dict[@"FontPercentSize"] = [NSNumber numberWithInt:self.fontPercentSize];
+//  if (self.spinePath) dict[@"SpinePath"] = self.spinePath;
+//  if (self.title) dict[@"Title"] = self.title;
+//  if (self.text) dict[@"Text"] = self.text;
+//  dict[@"WindowSize"] = [NSKeyedArchiver archivedDataWithRootObject:[NSValue valueWithCGRect:self.windowSize]];
+//  return dict;
+//}
 
 @end

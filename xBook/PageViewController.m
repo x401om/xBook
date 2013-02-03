@@ -16,7 +16,9 @@
 @synthesize pageNumberLabel, webView, titleLabel, parameters;
 
 - (id)initWithParameters:(NSDictionary *)params {
-  return [[PageViewController alloc]initWithNibName:@"PageViewController" bundle:[NSBundle mainBundle]];
+  self = [[PageViewController alloc]initWithNibName:@"PageViewController" bundle:[NSBundle mainBundle]];
+  pageNumber = [params[@"PageNumber"] intValue];
+  return self;
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -35,6 +37,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   [self.view addSubview:self.webView];
+  self.pageNumberLabel.text = [NSString stringWithFormat:@"%d", pageNumber];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

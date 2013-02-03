@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "-[Chapter initWithDictionary:]:Chapter.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BookViewController gotoNextPage]:BookViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BookViewController updatePagination]:BookViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BookViewController gotoPageInCurrentSpine:]:BookViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chapter loadChapterWithWindowSize:fontPercentSize:]:Chapter.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BookViewController pageViewController:viewControllerAfterViewController:]:BookViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PageViewController initWithNibName:bundle:]:PageViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BookViewController viewDidLoad]:BookViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[EPub initWithEpubName:]:EPub.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[Chapter dictionary]:Chapter.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BookViewController gotoNextSpine]:BookViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BookViewController loadEpubWithName:]:BookViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[EPub parseOPF:]:EPub.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[BookViewController loadSpine:atPageIndex:highlightSearchResult:]:BookViewController.m">
+      </ContextState>
+      <ContextState
+         contextName = "-[PageViewController viewDidLoad]:PageViewController.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

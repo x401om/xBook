@@ -29,7 +29,7 @@
   UISlider* pageSlider;
   UILabel* currentPageLabel;
   
-	//EPub* loadedEpub;
+	EPub* loadedEpub;
 	int currentSpineIndex;
 	int currentPageInSpineIndex;
 	int pagesInCurrentSpineCount;
@@ -46,9 +46,11 @@
   
   SearchResultsViewController* searchResViewController;
   SearchResult* currentSearchResult;
+  
+  NSArray *saveSpiningArray;
 }
 
-@property (nonatomic, retain) EPub* loadedEpub;
+//@property  EPub* loadedEpub;
 
 @property (nonatomic, retain) SearchResult* currentSearchResult;
 
