@@ -55,6 +55,9 @@
 - (IBAction) slidingEnded:(id)sender;
 - (IBAction) doneClicked:(id)sender;
 
+- (void) gotoNextPage;
+- (void) gotoPrevPage;
+
 - (void) loadSpine:(int)spineIndex atPageIndex:(int)pageIndex highlightSearchResult:(SearchResult *)theResult;
 
 - (void) loadEpubWithName:(NSString *)epubName;

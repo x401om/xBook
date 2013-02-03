@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C923DC8F16BC11B600EB68A9 /* XBDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C923DC8C16BC11B600EB68A9 /* XBDataViewController.m */; };
+		C923DC9016BC11B600EB68A9 /* XBModelController.m in Sources */ = {isa = PBXBuildFile; fileRef = C923DC8E16BC11B600EB68A9 /* XBModelController.m */; };
+		C923DCD116BC692100EB68A9 /* XBDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C923DCD016BC692100EB68A9 /* XBDataViewController.xib */; };
+		C923DCD516BC6EB300EB68A9 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C923DCD316BC6EB200EB68A9 /* BookViewController.m */; };
+		C923DCD616BC6EB300EB68A9 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C923DCD416BC6EB300EB68A9 /* BookViewController.xib */; };
 		C9D71D3316B7F8C400AB00C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3216B7F8C400AB00C2 /* UIKit.framework */; };
 		C9D71D3516B7F8C400AB00C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3416B7F8C400AB00C2 /* Foundation.framework */; };
 		C9D71D3716B7F8C400AB00C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3616B7F8C400AB00C2 /* CoreGraphics.framework */; };
@@ -61,6 +66,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C923DC8B16BC11B600EB68A9 /* XBDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDataViewController.h; sourceTree = "<group>"; };
+		C923DC8C16BC11B600EB68A9 /* XBDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBDataViewController.m; sourceTree = "<group>"; };
+		C923DC8D16BC11B600EB68A9 /* XBModelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBModelController.h; sourceTree = "<group>"; };
+		C923DC8E16BC11B600EB68A9 /* XBModelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBModelController.m; sourceTree = "<group>"; };
+		C923DCD016BC692100EB68A9 /* XBDataViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XBDataViewController.xib; sourceTree = "<group>"; };
+		C923DCD216BC6EB200EB68A9 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
+		C923DCD316BC6EB200EB68A9 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
+		C923DCD416BC6EB300EB68A9 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
 		C9D71D2F16B7F8C400AB00C2 /* xBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D71D3216B7F8C400AB00C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9D71D3416B7F8C400AB00C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -202,6 +215,11 @@
 		C9D71D3816B7F8C400AB00C2 /* xBook */ = {
 			isa = PBXGroup;
 			children = (
+				C923DC8B16BC11B600EB68A9 /* XBDataViewController.h */,
+				C923DC8C16BC11B600EB68A9 /* XBDataViewController.m */,
+				C923DCD016BC692100EB68A9 /* XBDataViewController.xib */,
+				C923DC8D16BC11B600EB68A9 /* XBModelController.h */,
+				C923DC8E16BC11B600EB68A9 /* XBModelController.m */,
 				C9F281A916BBCC7300053942 /* Translator */,
 				C9F2814916BB10AD00053942 /* EpubHandler */,
 				C9D71D4116B7F8C400AB00C2 /* XBAppDelegate.h */,
@@ -211,6 +229,9 @@
 				C9F2819816BBAE9800053942 /* XBRootViewController.xib */,
 				C9D71D9B16B83C4200AB00C2 /* ZipArchive */,
 				C9D71D3916B7F8C400AB00C2 /* Supporting Files */,
+				C923DCD216BC6EB200EB68A9 /* BookViewController.h */,
+				C923DCD316BC6EB200EB68A9 /* BookViewController.m */,
+				C923DCD416BC6EB300EB68A9 /* BookViewController.xib */,
 			);
 			path = xBook;
 			sourceTree = "<group>";
@@ -424,6 +445,8 @@
 				C9F2819E16BBB29600053942 /* SearchResultsViewController.xib in Resources */,
 				C9F281A616BBC13E00053942 /* XBTranslatePopover.xib in Resources */,
 				C9F281A816BBC67700053942 /* translatePanel.png in Resources */,
+				C923DCD116BC692100EB68A9 /* XBDataViewController.xib in Resources */,
+				C923DCD616BC6EB300EB68A9 /* BookViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -467,6 +490,9 @@
 				C9F2819916BBAE9800053942 /* XBRootViewController.m in Sources */,
 				C9F281A116BBBCA000053942 /* XBTranslator.m in Sources */,
 				C9F281A416BBC12B00053942 /* XBTranslatePopover.m in Sources */,
+				C923DC8F16BC11B600EB68A9 /* XBDataViewController.m in Sources */,
+				C923DC9016BC11B600EB68A9 /* XBModelController.m in Sources */,
+				C923DCD516BC6EB300EB68A9 /* BookViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

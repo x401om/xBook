@@ -17,9 +17,16 @@
 @synthesize webView, url, page;
 
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  webView = [[UIWebView alloc]initWithFrame:CGRectMake(0, 0, 700, 1000)];
+  [self.view addSubview:webView];
+  self.view.backgroundColor = [UIColor greenColor];
+  url = [NSURL URLWithString:@"http://ya.ru"];
+  [webView loadRequest:[NSURLRequest requestWithURL:url]];
+
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -29,25 +36,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-  [super viewWillAppear:animated];
-
-  self.dataLabel.text = [NSString stringWithFormat:@"%d", self.page];
-
-  [self.webView setUserInteractionEnabled:NO];
-
-}
-
-
-- (IBAction)changeTextFontSize:(id)sender
-{
-
-}
-
-- (void)webViewDidFinishLoad:(UIWebView *)theWebView{
-	
-	NSString *varMySheet = @"var mySheet = document.styleSheets[0];";
+- (void)webViewDidFinishLoad:(UIWebView *)webView {
+  [[NSNotificationCenter defaultCenter]postNotificationName:@"WebViewLoaded" object:nil];
+  NSString *varMySheet = @"var mySheet = document.styleSheets[0];";
 	
 	NSString *addCSSRule =  @"function addCSSRule(selector, newRule) {"
 	"if (mySheet.addRule) {"
@@ -57,10 +48,9 @@
 	"mySheet.insertRule(selector + '{' + newRule + ';}', ruleIndex);"   // For Firefox, Chrome, etc.
 	"}"
 	"}";
-	
 	NSString *insertRule1 = [NSString stringWithFormat:@"addCSSRule('html', 'padding: 0px; height: %fpx; -webkit-column-gap: 0px; -webkit-column-width: %fpx;')", webView.frame.size.height, webView.frame.size.width];
 	NSString *insertRule2 = [NSString stringWithFormat:@"addCSSRule('p', 'text-align: justify;')"];
-	NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')", self.dataObject.currentTextSize];
+	NSString *setTextSizeRule = [NSString stringWithFormat:@"addCSSRule('body', '-webkit-text-size-adjust: %d%%;')",self.dataObject.currentTextSize];
 	NSString *setHighlightColorRule = [NSString stringWithFormat:@"addCSSRule('highlight', 'background-color: yellow;')"];
   
 	
@@ -78,17 +68,15 @@
 	
 //	if(currentSearchResult!=nil){
 //    //	NSLog(@"Highlighting %@", currentSearchResult.originatingQuery);
-//    //[webView highlightAllOccurencesOfString:currentSearchResult.originatingQuery];
+//    [webView highlightAllOccurencesOfString:currentSearchResult.originatingQuery];
 //	}
 	
 	
 	int totalWidth = [[webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.scrollWidth"] intValue];
 	self.dataObject.pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
-	
 	[self.dataObject gotoPageInCurrentSpine:self.dataObject.currentPageInSpineIndex];
+  
 }
-
-
 
 
 @end

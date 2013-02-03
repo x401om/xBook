@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "EPubViewController.h"
 
-@interface XBRootViewController : UIViewController
+@interface XBRootViewController : UIViewController <UIPageViewControllerDelegate, UIWebViewDelegate> {
+  EPubViewController *startingVC;
+  BOOL loaded;
+}
+
+@property UIPageViewController *pageViewController;
 
 @end
