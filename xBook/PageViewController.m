@@ -35,6 +35,8 @@
 
 - (void)viewDidLoad {
   [super viewDidLoad];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(userSelectedText:) name:UIMenuControllerWillShowMenuNotification object:nil];
+
   //[[UIScreen mainScreen]setBrightness:1];
   [self.view addSubview:self.webView];
   pageNumber = [parameters[@"PageNumber"] integerValue];
@@ -44,6 +46,10 @@
   tapGestureRecognizer.delegate = self;
   //[self.view addGestureRecognizer:tapGestureRecognizer];//
   //[self.webView addGestureRecognizer:tapGestureRecognizer];
+  
+  UILongPressGestureRecognizer *longPressGR = [[UILongPressGestureRecognizer alloc]initWithTarget:self action:@selector(userSelectedText:)];
+  longPressGR.delegate = self;
+  //[self.view addGestureRecognizer:longPressGR];
 }
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
@@ -74,6 +80,19 @@
 
 - (IBAction)backButtonPressed:(id)sender {
   [[NSNotificationCenter defaultCenter]postNotificationName:@"Back" object:nil];
+}
+
+- (void)userSelectedText:(UILongPressGestureRecognizer *)sender {
+//  if (sender.state != UIGestureRecognizerStateBegan) {
+//    return;
+//  }
+  NSString *selection = [self.webView stringByEvaluatingJavaScriptFromString:@"window.getSelection().toString()"];
+  UIMenuController *menu = [UIMenuController sharedMenuController];
+	[menu setMenuVisible:NO];
+	[menu performSelector:@selector(setMenuVisible:) withObject:[NSNumber numberWithBool:NO] afterDelay:0.15];
+  if ([self.delegate respondsToSelector:@selector(showTranslationForText:)]) {
+    [self.delegate showTranslationForText:selection];
+  }
 }
 
 @end

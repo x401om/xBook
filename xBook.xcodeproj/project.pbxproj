@@ -20,6 +20,8 @@
 		C919D0D516BF05E7005D123E /* XMLHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C919D0D216BF05E7005D123E /* XMLHandler.m */; };
 		C923DCD516BC6EB300EB68A9 /* BookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C923DCD316BC6EB200EB68A9 /* BookViewController.m */; };
 		C923DCD616BC6EB300EB68A9 /* BookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C923DCD416BC6EB300EB68A9 /* BookViewController.xib */; };
+		C95E324C16BFF541000B02EF /* XBDictionaryView.m in Sources */ = {isa = PBXBuildFile; fileRef = C95E324B16BFF541000B02EF /* XBDictionaryView.m */; };
+		C95E324E16BFF55B000B02EF /* XBDictionaryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95E324D16BFF55B000B02EF /* XBDictionaryView.xib */; };
 		C9D71D3316B7F8C400AB00C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3216B7F8C400AB00C2 /* UIKit.framework */; };
 		C9D71D3516B7F8C400AB00C2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3416B7F8C400AB00C2 /* Foundation.framework */; };
 		C9D71D3716B7F8C400AB00C2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9D71D3616B7F8C400AB00C2 /* CoreGraphics.framework */; };
@@ -90,6 +92,9 @@
 		C923DCD216BC6EB200EB68A9 /* BookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookViewController.h; sourceTree = "<group>"; };
 		C923DCD316BC6EB200EB68A9 /* BookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookViewController.m; sourceTree = "<group>"; };
 		C923DCD416BC6EB300EB68A9 /* BookViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookViewController.xib; sourceTree = "<group>"; };
+		C95E324A16BFF541000B02EF /* XBDictionaryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBDictionaryView.h; sourceTree = "<group>"; };
+		C95E324B16BFF541000B02EF /* XBDictionaryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBDictionaryView.m; sourceTree = "<group>"; };
+		C95E324D16BFF55B000B02EF /* XBDictionaryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XBDictionaryView.xib; sourceTree = "<group>"; };
 		C9D71D2F16B7F8C400AB00C2 /* xBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9D71D3216B7F8C400AB00C2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C9D71D3416B7F8C400AB00C2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -259,6 +264,9 @@
 				C919D0CE16BF05E5005D123E /* XBEpubHandler.m */,
 				C919D0CF16BF05E6005D123E /* EpubContent.h */,
 				C919D0D016BF05E6005D123E /* EpubContent.m */,
+				C95E324A16BFF541000B02EF /* XBDictionaryView.h */,
+				C95E324B16BFF541000B02EF /* XBDictionaryView.m */,
+				C95E324D16BFF55B000B02EF /* XBDictionaryView.xib */,
 			);
 			path = xBook;
 			sourceTree = "<group>";
@@ -478,6 +486,7 @@
 				C913D2A416BF1A6800EE5FC7 /* book1.epub in Resources */,
 				C913D2A616BF1A8100EE5FC7 /* book2.epub in Resources */,
 				C913D2A816BF1A9500EE5FC7 /* book3.epub in Resources */,
+				C95E324E16BFF55B000B02EF /* XBDictionaryView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +535,7 @@
 				C919D0D416BF05E7005D123E /* EpubContent.m in Sources */,
 				C919D0D516BF05E7005D123E /* XMLHandler.m in Sources */,
 				C913D2A116BF165400EE5FC7 /* XBBookSourceViewController.m in Sources */,
+				C95E324C16BFF541000B02EF /* XBDictionaryView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

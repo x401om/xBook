@@ -10,4 +10,12 @@
 
 @interface XBDictionaryView : UIView
 
+@property (strong, nonatomic) IBOutlet UILabel *wordLabel;
+@property (strong, nonatomic) IBOutlet UITextView *translationTextView;
+
+
+- (void)loadText:(NSString *)text;
+- (void)moveViewLeft;
+- (void)moveViewRight;
+
 @end

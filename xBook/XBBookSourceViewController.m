@@ -97,7 +97,7 @@
 
 - (void)paginationDone {
   
-  PageViewController *startingViewController = [pageViewController pageWithIndex:0];
+  PageViewController *startingViewController = [pageViewController pageWithIndex:10];
   
   NSArray *viewControllers = @[startingViewController];
   [self.pageViewController setViewControllers:viewControllers direction:UIPageViewControllerNavigationDirectionForward animated:NO completion:NULL];

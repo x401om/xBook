@@ -8,12 +8,51 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "xBook/BookViewController.m"
-         timestampString = "381620789.08032"
+         timestampString = "381681200.443849"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "362"
-         endingLineNumber = "362"
+         startingLineNumber = "374"
+         endingLineNumber = "374"
          landmarkName = "-pageViewController:viewControllerAfterViewController:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "xBook/PageViewController.m"
+         timestampString = "381682106.304398"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "90"
+         endingLineNumber = "90"
+         landmarkName = "-userSelectedText:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "xBook/XBDictionaryView.m"
+         timestampString = "381681159.898411"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "37"
+         endingLineNumber = "37"
+         landmarkName = "-loadText:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "xBook/BookViewController.m"
+         timestampString = "381681353.435455"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "495"
+         endingLineNumber = "495"
+         landmarkName = "-showTranslationForText:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

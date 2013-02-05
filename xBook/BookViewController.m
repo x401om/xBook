@@ -63,6 +63,7 @@
     [NSException raise:@"Can't load book - the bookName value is set to nil" format:nil];
   }
   [self loadEpubWithName:bookName];
+  dictionaryView = [[XBDictionaryView alloc]initWithFrame:CGRectNull];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -486,6 +487,14 @@
 	pagesInCurrentSpineCount = (int)((float)totalWidth/webView.bounds.size.width);
 	
 	[self gotoPageInCurrentSpine:currentPageInSpineIndex];
+}
+
+#pragma mark- PageViewControllerDelegate
+
+- (void)showTranslationForText:(NSString *)text {
+  [self.view addSubview:dictionaryView];
+  [dictionaryView loadText:text];
+  [dictionaryView moveViewRight];
 }
 
 @end

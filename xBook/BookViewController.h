@@ -12,6 +12,7 @@
 #import "Chapter.h"
 #import "XBTranslatePopover.h"
 #import "PageViewController.h"
+#import "XBDictionaryView.h"
 
 @protocol BookViewControllerDelegate <NSObject>
 
@@ -25,9 +26,11 @@
 @class SearchResult;
 
 
-@interface BookViewController : UIPageViewController <UIPageViewControllerDataSource, UIWebViewDelegate, ChapterDelegate, UIGestureRecognizerDelegate> {
+@interface BookViewController : UIPageViewController <UIPageViewControllerDataSource, UIWebViewDelegate, ChapterDelegate, UIGestureRecognizerDelegate, PageViewControllerDelegate> {
   UIToolbar *toolbar;
   PageViewController *pageForReturn;
+  
+  XBDictionaryView *dictionaryView;
   
   // parameters
   int currentTextSize;
